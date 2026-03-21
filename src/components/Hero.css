@@ -1,24 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
 .hero{
-    background-color: blue;
+    background-color: rgb(9, 9, 83);
     font-family: Sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 80px;
 }
 .logo{
     height: 50px;
     width: 30px;
-    padding: 50px 80px;
+    padding: 30px;
 }
-
-.content{
+.flex{
     display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+.content{
     flex-direction: grid;
-    gap: 30px;
     justify-content: space-around;
 }
 .content h1{
     font-weight: 40px;
-    color: #777;
+    color: #c7c3c3;
 }
 .content p{
-    padding-top: 30px
+    padding-top: 15px;
+    color: #b6b2b2;
+}
+.btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: space-between;
+    justify-content: space-around;
+    gap: 30px;
+    display: inline-block;
+}
+.btn-primary{
+    background-color: #133b67;
+    color: rgb(238, 232, 232);
 
+}
+.btn-secondary{
+    background-color: #56738d;
+    color: rgb(231, 222, 222);
+    margin: 30px;
+}
+.hero-image img{
+    width: 400px;
+    height: auto;
+}
+@media  screen  and (max-width: 768px) {
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+    .flex{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .btn{
+        margin: 10px;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 480px) {
+    .hero{
+        padding: 20px;
+    }
+    .content h1{
+        font-size: 24px;
+    }
+    .content p{
+        font-size: 16px;
+    }
+    .btn{
+        margin: 5px;
+    }
 }
