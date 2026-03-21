@@ -61,24 +61,31 @@ const ContactForm = () => {
     
     if (Object.keys(validationErrors).length === 0) {
       try {
-        console.log('Form submitted:', {
-          fullName: formData.fullName,
-          email: formData.email,
-          phoneNumber: formData.phoneNumber,
-          message: formData.message
+        // Real API endpoint
+        const response = await fetch('https://whitebricks.com/tsacademy.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.fullName,
+            email: formData.email,
+            phone: formData.phoneNumber,
+            message: formData.message
+          })
         });
         
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        setSubmitted(true);
-        setFormData({ fullName: '', email: '', phoneNumber: '', message: '' });
-        setCharCount(0);
-        
-        setTimeout(() => setSubmitted(false), 5000);
-        
+        if (response.ok) {
+          setSubmitted(true);
+          setFormData({ fullName: '', email: '', phoneNumber: '', message: '' });
+          setCharCount(0);
+          setTimeout(() => setSubmitted(false), 5000);
+        } else {
+          alert('Submission failed. Please try again.');
+        }
       } catch (error) {
         console.error('Submission error:', error);
-        alert('Something went wrong. Please try again.');
+        alert('Something went wrong. Please check your connection and try again.');
       }
     }
   };
