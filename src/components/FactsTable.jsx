@@ -7,6 +7,7 @@ const FactsTable = () => {
       <h2>Planetary Facts at a Glance</h2>
        <p>Below is a comparative table of major planets in our solar system. The data highlights key physical
       properties used by astronomers and researchers worldwide.</p>
+      <div className="table-container">
     <table>
       <caption>Data about the planets of our solar system (Planetary facts taken from NASA)</caption>
       <thead>
@@ -81,7 +82,7 @@ const FactsTable = () => {
           <td>3.7</td>
         </tr>
         <tr>
-          <td class="double-span" colspan="2" rowspan="2">Dwarf Planets</td>
+          <td classname="double-span" colspan="2" rowspan="2">Dwarf Planets</td>
           <td>Pluto</td>
           <td>0.330</td>
           <td>4,878</td>
@@ -90,6 +91,7 @@ const FactsTable = () => {
         </tr>
       </tbody>
     </table>
+    </div>
   </section>
   );
 };
