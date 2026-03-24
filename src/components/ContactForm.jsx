@@ -8,71 +8,98 @@ const ContactForm = () => {
     phone: '',
     message: ''
   });
-
+  
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
   const [charCount, setCharCount] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validate = () => {
     const newErrors = {};
-
+    
     if (!formData.name.trim()) {
       newErrors.name = 'Full name is required';
     }
-
+    
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
-
+    
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
     } else if (!/^[\d\s\+\-\(\)]{10,}$/.test(formData.phone)) {
       newErrors.phone = 'Please enter a valid phone number (minimum 10 digits)';
     }
-
+    
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     } else if (formData.message.length < 10) {
       newErrors.message = 'Message must be at least 10 characters';
     }
-
+    
     return newErrors;
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-
+    
     if (name === 'message') {
       setCharCount(value.length);
     }
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // prevent page reload
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
     const validationErrors = validate();
     setErrors(validationErrors);
-
-    if (Object.keys(validationErrors).length !== 0) return;
-
-    // Simulate successful submission
-    setSubmitted(true);
-
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
-    setCharCount(0);
+    
+    if (Object.keys(validationErrors).length === 0) {
+      setIsSubmitting(true);
+      try {
+        // Real API endpoint
+        const response = await fetch('https://whitebricks.com/tsacademy.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message
+          })
+        });
+        
+        if (response.ok) {
+          setSubmitted(true);
+          setFormData({ name: '', email: '', phone: '', message: '' });
+          setCharCount(0);
+          setTimeout(() => setSubmitted(false), 5000);
+        } else {
+          alert('Submission failed. Please try again.');
+        }
+      } catch (error) {
+        console.error('Submission error:', error);
+        alert('Something went wrong. Please check your connection and try again.');
+      } finally {
+        setIsSubmitting(false);
+      }
+    }
   };
 
   return (
@@ -85,7 +112,7 @@ const ContactForm = () => {
             Reach out and we'll get back to you.
           </p>
         </div>
-
+        
         {submitted ? (
           <div className="success-message">
             <h3>Thank You!</h3>
@@ -94,12 +121,8 @@ const ContactForm = () => {
         ) : (
           <form onSubmit={handleSubmit} className="contact-form" noValidate>
             <div className="form-grid">
-
-              {/* Full Name */}
               <div className="form-group">
-                <label htmlFor="fullName">
-                  Full Name<span className="asterisk">*</span>
-                </label>
+                <label htmlFor="fullName">Full Name<span className="asterisk">*</span></label>
                 <input
                   type="text"
                   id="fullName"
@@ -112,11 +135,8 @@ const ContactForm = () => {
                 {errors.name && <span className="error-message">{errors.name}</span>}
               </div>
 
-              {/* Email */}
               <div className="form-group">
-                <label htmlFor="email">
-                  Email<span className="asterisk">*</span>
-                </label>
+                <label htmlFor="email">Email<span className="asterisk">*</span></label>
                 <input
                   type="email"
                   id="email"
@@ -129,11 +149,8 @@ const ContactForm = () => {
                 {errors.email && <span className="error-message">{errors.email}</span>}
               </div>
 
-              {/* Phone */}
               <div className="form-group">
-                <label htmlFor="phoneNumber">
-                  Phone Number<span className="asterisk">*</span>
-                </label>
+                <label htmlFor="phoneNumber">Phone Number<span className="asterisk">*</span></label>
                 <input
                   type="tel"
                   id="phoneNumber"
@@ -141,16 +158,13 @@ const ContactForm = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   className={errors.phone ? 'error' : ''}
-                  placeholder="e.g. 08012345678"
+                  placeholder="Please enter a valid phone number"
                 />
                 {errors.phone && <span className="error-message">{errors.phone}</span>}
               </div>
 
-              {/* Message */}
               <div className="form-group">
-                <label htmlFor="message">
-                  Message<span className="asterisk">*</span>
-                </label>
+                <label htmlFor="message">Message<span className="asterisk">*</span></label>
                 <textarea
                   id="message"
                   name="message"
@@ -161,16 +175,13 @@ const ContactForm = () => {
                   placeholder="Enter your message"
                   maxLength="500"
                 />
-                <div className="char-counter">{charCount}/500 characters</div>
-                {errors.message && (
-                  <span className="error-message">{errors.message}</span>
-                )}
+                <div className="char-counter">{charCount}/100 characters</div>
+                {errors.message && <span className="error-message">{errors.message}</span>}
               </div>
-
             </div>
 
-            <button type="submit" className="submit-btn">
-              Submit <span className="arrow"> &rsaquo; </span>
+            <button type="submit" className="submit-btn" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Submit'} <span className="arrow"> &rsaquo; </span>
             </button>
           </form>
         )}
