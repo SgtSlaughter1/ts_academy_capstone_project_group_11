@@ -17,9 +17,9 @@
 
 table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   border-radius: 16px;
-  overflow: hidden;
 }
 
 caption {
@@ -65,4 +65,35 @@ thead th:last-child {
 td {
   text-align: center;
   background-color: #f2f7ff;
+}
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+
+@media (max-width: 768px) {
+  .fact-table {
+    padding: 20px;
+  }
+
+  .fact-table h2 {
+    font-size: 1.4rem;
+  }
+
+  .fact-table p {
+    font-size: 0.9rem;
+  }
+
+  table {
+    min-width: 600px; 
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
 }
