@@ -10,7 +10,7 @@ A dynamic, component-based web application built with React that allows users to
 - [Local Development](#local-development)
 - [Live Deployment](#live-deployment)
 
-## Overview
+## Overview.
 
 Recreating a planet exploration mockup as a working React application. The app features:
 
