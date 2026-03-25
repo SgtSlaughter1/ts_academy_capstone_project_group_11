@@ -1,0 +1,43 @@
+.planet-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0,08);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.planet-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.planet-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.planet-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.planet-distance {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
