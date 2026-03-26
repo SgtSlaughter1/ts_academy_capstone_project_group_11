@@ -2,7 +2,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 20px;
-    background-color: #ffffff;
+    background-color: #e0e4e9;
 }
 
 .gallery-grid {
@@ -12,7 +12,7 @@
 
 .gallery-title {
     font-family: 'Montserrat', sans-serif;
-    color: #1a365d;
+    color: #164baf;
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 15px;
@@ -20,8 +20,7 @@
 
 .gallery-desc {
     font-family: 'Open Sans', sans-serif;
-    color: #4a5568;
-    max-width: 700px;
+    color: #000;
     margin: 0 auto;
     line-height: 1.6;
 }
@@ -29,7 +28,10 @@
 .planet-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 24px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 @media (max-width: 992px) {

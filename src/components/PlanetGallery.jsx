@@ -1,18 +1,27 @@
 import React from 'react';
 import PlanetCard from './PlanetCard';
 import './PlanetGallery.css';
+import mercuryImage from '../assets/mercury.jpg';
+import venusImage from '../assets/venus.jpg';
+import earthImage from '../assets/earth.jpg';
+import marsImage from '../assets/mars.jpg';
+import jupiterImage from '../assets/jupiter.jpg';
+import saturnImage from '../assets/saturn.jpg';
+import uranusImage from '../assets/uranus.jpg';
+import neptuneImage from '../assets/neptune.jpg';
+import plutoImage from '../assets/pluto.jpg';
 
 const PlanetGallery = () => {
   const planetData = [
-    { name: "Mercury", distance: "57.9", image: "../images/mercury.jpg"},
-    { name: "Venus", distance: "108.2", image: "../images/venus.webp"},
-    { name: "Earth", distance: "149.6", image: "../images/earth.jpeg"},
-    { name: "Mars", distance: "227.9", image: "../images/mars.webp"},
-    { name: "Jupiter", distance: "778.6", image: "../images/jupiter.webp"},
-    { name: "Saturn", distance: "1433.5", image: "../images/saturn.webp"},
-    { name: "Uranus", distance: "2872.5", image: "../images/uranus.webp"},
-    { name: "Neptune", distance: "4495.1", image: "../images/neptune.webp"},
-    { name: "Pluto", distance: "5906.4", image: "../images/pluto.webp"},
+    { name: "Mercury", distance: "57.9", imageUrl: mercuryImage},
+    { name: "Venus", distance: "108.2", imageUrl: venusImage},
+    { name: "Earth", distance: "149.6", imageUrl: earthImage},
+    { name: "Mars", distance: "227.9", imageUrl: marsImage},
+    { name: "Jupiter", distance: "778.6", imageUrl: jupiterImage},
+    { name: "Saturn", distance: "1433.5", imageUrl: saturnImage},
+    { name: "Uranus", distance: "2872.5", imageUrl: uranusImage},
+    { name: "Neptune", distance: "4495.1", imageUrl: neptuneImage},
+    { name: "Pluto", distance: "5906.4", imageUrl: plutoImage},
   ];
 
   return (
@@ -28,6 +37,7 @@ const PlanetGallery = () => {
           key={index}
           name={planet.name}
           distance={planet.distance}
+          imageUrl={planet.imageUrl}
           />
         ))}
       </div>
