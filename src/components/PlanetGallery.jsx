@@ -27,19 +27,7 @@ const PlanetGallery = () => {
   return (
     <section className="planet-gallery">
       <div className="gallery-grid">
-      <h2 className="gallery-title">Visualizing the Differences Between Planets</h2>
-      <p className="gallery-desc">Each planet in our solar system has unique physical characteristics. Visual comparisons help highlight how vastly different terrestial planets are from gas giants and ice giants.</p>
-      </div>
-    
-      <div className="planet-grid">
-        {planetData.map((planet, index) => (
-          <PlanetCard
-          key={index}
-          name={planet.name}
-          distance={planet.distance}
-          imageUrl={planet.imageUrl}
-          />
-        ))}
+         <PlanetCard /> 
       </div>
     </section>
   );

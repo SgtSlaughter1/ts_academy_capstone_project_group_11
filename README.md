@@ -10,11 +10,11 @@ A dynamic, component-based web application built with React that allows users to
 - [Local Development](#local-development)
 - [Live Deployment](#live-deployment)
 
-## Overview
+## Overview.
 
 Recreating a planet exploration mockup as a working React application. The app features:
 
-- Dynamic data retrieval from a Planets API.
+- Dynamic data retrieval from a Planets API
 - Reusable React components.
 - Responsive layout including mobile view modifications.
 - Interactive contact form with client-side validation.
