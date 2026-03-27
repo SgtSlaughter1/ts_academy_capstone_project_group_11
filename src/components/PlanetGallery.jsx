@@ -1,15 +1,5 @@
 import React from 'react';
 import PlanetCard from './PlanetCard';
-import './PlanetGallery.css';
-import mercuryImage from '../assets/mercury.jpg';
-import venusImage from '../assets/venus.jpg';
-import earthImage from '../assets/earth.jpg';
-import marsImage from '../assets/mars.jpg';
-import jupiterImage from '../assets/jupiter.jpg';
-import saturnImage from '../assets/saturn.jpg';
-import uranusImage from '../assets/uranus.jpg';
-import neptuneImage from '../assets/neptune.jpg';
-import plutoImage from '../assets/pluto.jpg';
 
 const PlanetGallery = () => {
   const planetData = [
@@ -24,7 +14,7 @@ const PlanetGallery = () => {
     { name: "Pluto", distance: "5906.4", imageUrl: plutoImage},
   ];
 
-  return (
+   return (
     <section className="planet-gallery">
       <div className="gallery-grid">
       <h2 className="gallery-title">Visualizing the Differences Between Planets</h2>
