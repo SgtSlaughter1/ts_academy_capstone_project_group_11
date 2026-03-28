@@ -1,5 +1,5 @@
 import React from 'react';
-import PlanetCard from './PlanetCard';
+// import PlanetCard from './PlanetCard';
 
 const PlanetGallery = () => {
   return (

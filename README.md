@@ -12,23 +12,32 @@ A dynamic, component-based web application built with React that allows users to
 
 ## Overview
 
-Recreating a planet exploration mockup as a working React application. The app features:
+This project is a React-based web application that provides a comprehensive look at the planets in our solar system. It features:
 
-- Dynamic data retrieval from a Planets API
-- Reusable React components.
-- Responsive layout including mobile view modifications.
-- Interactive contact form with client-side validation.
-- Premium dark-themed design with glassmorphism and animations.
+- Dynamic planetary data comparison.
+- Responsive design for desktop, tablet, and mobile.
+- Interactive video and gallery sections.
+- Secure and validated contact form.
 
 ## Team Members
 
-_Team details will be updated shortly._
+The following group members contributed to the success of this project:
+
+- **[Habeeb Abdulsalam O (Team Lead)](https://github.com/sgtslaughter1)**
+- **[Joshua Emorwodia](https://github.com/emorwodia)** - Planetary facts at a glance and the table.
+- **[Fidel okeke](https://github.com/fidel-okeke)** - Planetary facts at a glance and the table.
+- **[Dawodu Temiloluwa Blessing](https://github.com/dawodutemiloluwa708-code)** - Planet Card and Gallery Section.
+- **[Ogunsola Oluwatosin Rukayat](https://github.com/olatundeoluwatosin4-maker)** - Contact Section.
+- **[Olelewe Dustan Chimereze](https://github.com/Dustan1)** - Video section.
+- **[Mmiliogu Francis Chukwudi](https://github.com/chuksmili)** - Hero components.
+- **[Adebayo Damola Lawrence](https://github.com/Drlaw01)** - About / Footer section.
+- **[Adedokun Temiloluwa Deborah](https://github.com/1tz-lolu)**
+- **[Sarah Efewongbe Irabor](https://github.com/Sayrahirabs)**
 
 ## Component Breakdown
 
 The application is structured into modular components:
 
-- **Navbar**: Logo and navigation links.
 - **Hero**: Main call-to-action with planetary imagery.
 - **VideoSection**: Autoplay video and explanatory content.
 - **PlanetGallery**: Grid container for planet visualizations.
@@ -37,7 +46,6 @@ The application is structured into modular components:
 - **FactsTable**: Specialized table for celestial comparisons.
 - **ContactForm**: User inquiry form with validation logic.
 - **Footer**: About section and project metadata.
-- **UI Components**: Reusable elements like `Button`.
 
 ## Local Development
 
@@ -46,8 +54,8 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
-   cd TS_capstone_project
+   git clone https://github.com/sgtslaughter1/ts_academy_capstone_project_group_11.git
+   cd ts_academy_capstone_project_group_11
    ```
 
 2. **Install dependencies:**
