@@ -1,6 +1,6 @@
 .planet-card {
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
@@ -14,12 +14,14 @@
 
 .image-container {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9;
     background-color: #000;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .planet-image {
@@ -31,21 +33,21 @@
 }
 
 .card-content {
-    padding: 18px;
+    padding: 24px;
     text-align: center;
 }
 
 .planet-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
     color: #000;
 }
 
 .planet-distance {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
     font-weight: 700;
     margin-top: 6px;
     color: #000;

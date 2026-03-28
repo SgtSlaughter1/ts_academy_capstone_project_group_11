@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PlanetCard from './PlanetCard';
+import './PlanetGallery.css';
 
 const PlanetGallery = () => {
-  const planetData = [
-    { name: "Mercury", distance: "57.9", imageUrl: mercuryImage},
-    { name: "Venus", distance: "108.2", imageUrl: venusImage},
-    { name: "Earth", distance: "149.6", imageUrl: earthImage},
-    { name: "Mars", distance: "227.9", imageUrl: marsImage},
-    { name: "Jupiter", distance: "778.6", imageUrl: jupiterImage},
-    { name: "Saturn", distance: "1433.5", imageUrl: saturnImage},
-    { name: "Uranus", distance: "2872.5", imageUrl: uranusImage},
-    { name: "Neptune", distance: "4495.1", imageUrl: neptuneImage},
-    { name: "Pluto", distance: "5906.4", imageUrl: plutoImage},
-  ];
+  const [planetData, setPlanetData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://anurella.github.io/json/planets.json')
+      .then(response => response.json())
+      .then(data => {
+    console.log("This is my API data:", data);
+        setPlanetData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+    console.error("Error fetching planets:", error);
+        setLoading(false);
+   });
+}, []);
 
    return (
     <section className="planet-gallery">
@@ -20,14 +26,14 @@ const PlanetGallery = () => {
       <h2 className="gallery-title">Visualizing the Differences Between Planets</h2>
       <p className="gallery-desc">Each planet in our solar system has unique physical characteristics. Visual comparisons help highlight how vastly different terrestial planets are from gas giants and ice giants.</p>
       </div>
-    
+
       <div className="planet-grid">
-        {planetData.map((planet, index) => (
+        {planetData.map((planet) => (
           <PlanetCard
-          key={index}
-          name={planet.name}
-          distance={planet.distance}
-          imageUrl={planet.imageUrl}
+         key={planet.id}
+          planet={planet}
+          distanceFromSun={planet.distanceFromSun}
+          image={planet.image.replace("http://", "https://")}
           />
         ))}
       </div>

@@ -1,8 +1,11 @@
 .planet-gallery {
+    display: flex;
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 20px;
-    background-color: lightblue;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #d8dce2;
 }
 
 .gallery-grid {
@@ -11,7 +14,7 @@
 }
 
 .gallery-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #164baf;
     font-size: 2.2rem;
     font-weight: 700;
@@ -19,7 +22,7 @@
 }
 
 .gallery-desc {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #000;
     margin: 0 auto;
     line-height: 1.6;
@@ -34,7 +37,7 @@
     margin: 0 auto;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .planet-grid {
         grid-template-columns: repeat(2, 1fr);
     }
