@@ -6,7 +6,18 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -53,7 +64,7 @@ body {
 .footer-about h3::after,
 .footer-links h3::after,
 .footer-profiles h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 0;
@@ -277,7 +288,7 @@ body {
 }
 
 .btn-primary {
-  background: #164BAF;
+  background: #164baf;
   color: #ffffff;
 }
 
@@ -295,7 +306,7 @@ body {
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-color: #164BAF;
+  border-color: #164baf;
   transform: translateY(-2px);
 }
 
@@ -390,11 +401,11 @@ body {
 }
 
 .video-section span {
-  color: #164BAF;
+  color: #164baf;
 }
 
 .planetary {
-  color: #164BAF;
+  color: #164baf;
   margin-bottom: 13px;
   text-align: center;
 }
@@ -413,7 +424,7 @@ video {
   display: none;
 }
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
   video {
     max-width: 300px;
   }
@@ -583,22 +594,91 @@ video {
     grid-template-columns: 1fr;
     row-gap: 1.5rem;
   }
-  
+
   .contact-header {
     text-align: center;
     margin-bottom: 2.5rem;
   }
-  
+
   .contact-header h2 {
     font-size: 1.75rem;
   }
-  
+
   .contact-description {
     font-size: 1rem;
     margin: 0 auto;
   }
-  
+
   .submit-btn {
     width: 100%;
   }
+}
+
+.fact-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 16px;
+}
+.fact-table h2 {
+  align-self: flex-start;
+  text-align: left;
+}
+
+.fact-table p {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+caption {
+  width: 100%;
+  align-self: flex-start;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 8px;
+  color: #0f2a44;
+}
+
+table,
+th,
+td {
+  border: 3px solid #ffffff;
+  border-collapse: collapse;
+  padding: 16px;
+
+  align-content: center;
+}
+
+thead {
+  background-color: #164baf;
+}
+
+th {
+  color: #ffffff;
+}
+
+thead th:first-child {
+  border-top-left-radius: 16px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 16px;
+}
+
+.double-span {
+  background-color: #d1e3ff;
+}
+
+td {
+  text-align: center;
+  background-color: #f2f7ff;
 }
