@@ -13,7 +13,7 @@ const Footer = () => {
             API integration, and responsive design.
           </p>
           <div className="team-members">
-            <p><strong>Team Members:</strong> Habeeb A., Lawrence A.D., Joshua, ⁠Temiloluwa B, Chukwudi F.M, Temiloluwa A.D, Dustan C.O,  and Oluwatosin R.O</p>
+            <p><strong>Team Members:</strong> Habeeb A., Lawrence A.D, Joshua, ⁠Temiloluwa D.B, Chukwudi F.M, Temiloluwa A.D, Dustan C.O, Oluwatosin R.O, Fidel O.O, Gideon O.E and Sarah E.I</p>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ const Footer = () => {
           <p>
             Group Name: <a href="https://github.com/SgtSlaughter1/ts_academy_capstone_project_group_11" target="_blank" rel="noopener noreferrer">TS Academy Capstone Group 11</a>
           </p>
-          <p className="group-members">Created by: Habeeb A., Lawrence A.D., Joshua, ⁠Temiloluwa B, Chukwudi F.M, Temiloluwa A.D, Dustan C.O,  and Oluwatosin R.O</p>
+          <p className="group-members">Created by: Habeeb A., Lawrence A.D, Joshua, ⁠Temiloluwa D.B, Chukwudi F.M, Temiloluwa A.D, Dustan C.O, Oluwatosin R.O, Fidel O.O, Gideon O.E and Sarah E.I</p>
         </div>
       </div>
     </footer>
