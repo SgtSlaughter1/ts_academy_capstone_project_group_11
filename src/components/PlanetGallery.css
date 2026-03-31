@@ -1,0 +1,51 @@
+.planet-gallery {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #d8dce2;
+}
+
+.gallery-grid {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gallery-title {
+    font-family: 'Inter', sans-serif;
+    color: #164baf;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.gallery-desc {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.planet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .planet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .planet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
