@@ -1,13 +1,13 @@
 import React from 'react';
-import "./Hero.css";
-
+import logo from '../assets/logo-rem.png';
+import heroImage from '../assets/hero_imagerem.png';
 const Hero = () => {
 
 
   return (
     <section className="hero">
       <div className="logo">
-        <img src="/src/assets/logo-rem.png" alt="Solar System Logo" />
+        <img src={logo} alt="Solar System Logo" />
       </div>
 
       <div className='flex'>
@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-image">
-        <img src="/src/assets/hero_imagerem.png" alt="an image of a Planet" />
+        <img src={heroImage} alt="an image of a Planet" />
       </div>
       </div>
       

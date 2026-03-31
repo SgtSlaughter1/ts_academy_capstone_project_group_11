@@ -1,11 +1,11 @@
 import React from 'react';
-import './VideoSection.css';
+import planetVideo from '../assets/video.mp4';
 const VideoSection = () => {
   return (
     <section className="video-section">
       <div className='container'>
           <div>
-             <video loop muted autoPlay controls src="./src/assets/video.mp4"></video>
+             <video loop muted autoPlay controls src={planetVideo}></video>
            
           </div>
           <div>

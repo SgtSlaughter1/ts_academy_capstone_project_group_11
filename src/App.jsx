@@ -5,7 +5,7 @@ import PlanetGallery from "./components/PlanetGallery";
 import FactsSection from "./components/FactsSection";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
-import "./App.css";
+
 
 function App() {
   return (
