@@ -1,7 +1,6 @@
 import React from 'react';
 import PlanetGallery from './PlanetGallery';
 import './PlanetCard.css';
-import mercuryImg from '../public/images/mercury.jpg';
 
 const PlanetCard = ({ planet, distanceFromSun, image }) => {
 
@@ -21,13 +20,6 @@ const PlanetCard = ({ planet, distanceFromSun, image }) => {
       </div>
     </div>
   );
-
-  function MyComponent() {
-  return (
-    <img src={mercuryImg} alt="Mercury" />
-  );
-}
-
 };
 
 export default PlanetCard;
