@@ -4,8 +4,9 @@
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-    padding: 60px 20px;
-    background-color: #d8dce2;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #f2f7ff;
 }
 
 .gallery-grid {
@@ -30,10 +31,11 @@
 
 .planet-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding: 20px;
-    max-width: 1200px;
+    grid-template-columns: repeat(autofill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 0;
+    max-width: none;
+    width: 100%;
     margin: 0 auto;
 }
 

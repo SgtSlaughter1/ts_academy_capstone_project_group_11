@@ -28,13 +28,12 @@ const PlanetGallery = () => {
       </div>
 
       <div className="planet-grid">
-        {planetData.map((planet) => (
-          <PlanetCard
-         key={planet.id}
+        {planetData.map((planet, index) => (
+        <PlanetCard 
+          key={planet.id}
           planet={planet}
           distanceFromSun={planet.distanceFromSun}
-          image={planet.image.replace("http://", "https://")}
-          />
+        />
         ))}
       </div>
     </section>
