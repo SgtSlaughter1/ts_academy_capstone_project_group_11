@@ -8,14 +8,14 @@ const PlanetCard = ({ planet, distanceFromSun, image }) => {
     <div className="planet-card">
       <figure className="image-container">
         <img
-          src={imageUrl}
-          alt={planet.name} 
+          src={planet.image}
+          alt={planet.planet} 
           className="planet-image"
         /> 
       </figure>
 
       <div className="card-content">
-        <h3 className="planet-name">{planet.Planet}</h3>
+        <h3 className="planet-name">{planet.planet}</h3>
         <p className="planet-distance">{planet.distanceFromSun} million km</p>
       </div>
     </div>
