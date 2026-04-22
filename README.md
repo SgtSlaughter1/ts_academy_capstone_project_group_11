@@ -33,6 +33,7 @@ The following group members contributed to the success of this project:
 - **[Adebayo Damola Lawrence](https://github.com/Drlaw01)** - About / Footer section.
 - **[Adedokun Temiloluwa Deborah](https://github.com/1tz-lolu)**
 - **[Sarah Efewongbe Irabor](https://github.com/Sayrahirabs)**
+- **[Gideon Eghoh](https://github.com/Gidithecreator)** 
 
 ## Component Breakdown
 
